@@ -1,0 +1,11 @@
+FROM ubuntu
+MAINTAINER "subhasish"
+RUN apt-get update -y
+RUN mkdir 3ri
+WORKDIR 3ri
+RUN useradd -ms /bin/bash 3ri
+COPY . .
+RUN chmod +x hello.sh
+USER 3ri
+#WORKDIR 3ri
+ENTRYPOINT ["./hello.sh"]
