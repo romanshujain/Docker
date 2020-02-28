@@ -26,13 +26,3 @@ ENTRYPOINT ["nginx", "-g", "daemon off;"]
 
 
 
-#FROM ubuntu:18.04
-#RUN apt-get install apache -y
-#ADD index.html /var/www/html/
-#ENTRYPOINT [“/usr/sbin/httpd”,” -D”,” FOREGROUND”]
-#EXPOSE 80
-#/usr/share/nginx/html
-#ADD index.html /usr/share/nginx/html/index.html
-#ENTRYPOINT ["/usr/local/nginx/sbin", "-g" "daemon off;"]
-
-
